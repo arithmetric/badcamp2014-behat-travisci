@@ -1,0 +1,4 @@
+bin/behat
+composer.lock
+html
+vendor
