@@ -1,0 +1,26 @@
+language: php
+php:
+  - 5.4
+
+mysql:
+  database: drupal
+  username: drupal
+  password: drupal
+  encoding: utf8
+
+before_install:
+  - composer self-update
+  - pear channel-discover pear.drush.org
+
+install:
+  - pear install drush/drush
+  - phpenv rehash
+  - composer install
+
+before_script:
+  - ./bin/install_drupal.sh
+  - drush runserver --server=builtin 80 &
+  - until netstat -an 2>/dev/null | grep '80.*LISTEN'; do sleep 0.2; done
+
+script:
+  - ./bin/behat
