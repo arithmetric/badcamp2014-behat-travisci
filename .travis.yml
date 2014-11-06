@@ -4,8 +4,7 @@ php:
 
 mysql:
   database: drupal
-  username: drupal
-  password: drupal
+  username: root
   encoding: utf8
 
 before_install:
