@@ -18,7 +18,9 @@ install:
 
 before_script:
   - ./bin/install_drupal.sh
-  - cd html ; drush runserver --server=builtin 80 & ; cd ..
+  - cd html
+  - drush runserver --server=builtin 80 &
+  - cd ..
   - until netstat -an 2>/dev/null | grep '80.*LISTEN'; do sleep 0.2; done
 
 script:
