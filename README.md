@@ -78,3 +78,59 @@ Set up your project on Travis, so that it will test every commit.
 
 7. Travis will automatically run all tests the next time a commit is pushed.
 
+
+CUSTOMIZE
+---------
+
+This project can be used as a template to add Travis Behat testing to
+an existing Drupal project that lives in its own repository.  There
+are many ways this can be done; this is one possible recipe.
+
+Preconditions:  Presumes you have the following directory layout
+
+www
+  mysite
+    .git
+    .gitignore
+    drupal         {{--  YOUR DRUPAL ROOT
+      sites
+        default    {{--  SETTINGS.PHP NOT CHECKED IN TO REPOSITORY
+          files
+    private-files
+    behat          {{--  NEW FOLDER FOR TRAVIS BEHAT TESTS
+
+1. Clone a fresh copy of this project to get rid of any temporary files
+
+2. Copy all of the files in this project into your site: `cp -R badcamp2014-behat-travisci mysite/behat`
+
+3. Get rid of the .git file from this project: `rm -rf mysite/behat/.git`
+
+4. Move the .travis.yml file to the correct location: `mv mysite/behat/.travis.yml mysite`
+
+5. In .travis.yml, change `./bin/install_drupal_mysql.sh` to `./bin/install_existing_drupal_mysql.sh`
+
+6. In .travis.yml, change `cd html` to `cd drupal` 
+
+7. In behat.yml, change `drupal_root: './html'` to `drupal_root: '../drupal'`
+
+8. If your Drupal root is NOT named `drupal`, then edit `bin/install_existing_drupal_mysql.sh` and set DRUPAL_ROOT as needed.
+
+9. Commit `behat` and `.travis.yml` to your repository.
+
+10. TO TEST LOCALLY:
+
+11. `cd behat`
+
+12. If you do not have composer installed globally: `curl -s https://getcomposer.org/installer | php`
+
+13. `./composer install`
+
+14. `./bin/install_existing_drupal_sqlite.sh`
+
+15. Confirm that it worked: `./bin/behat -di`
+
+16. In a separate shell: `cd ../drupal && drush runserver --server=builtin 8080 --strict=0`
+
+17. Run some tests!  `./bin/behat`
+
+18. To test on Travis, follow the instructiong above, "STEP-BY-STEP SETUP ON TRAVIS".
