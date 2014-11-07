@@ -17,6 +17,7 @@ install:
   - composer install
 
 before_script:
+  - echo 'sendmail_path = /bin/true' >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini
   - ./bin/install_drupal.sh
   - cd html
   - drush runserver --server=builtin 8080 &
