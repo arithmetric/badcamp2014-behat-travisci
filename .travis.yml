@@ -17,7 +17,7 @@ install:
   - composer install
 
 before_script:
-  - ./bin/install_drupal.sh
+  - ./bin/install_drupal_mysql.sh
   - cd html
   - drush runserver --server=builtin 8080 --strict=0 &
   - cd ..
