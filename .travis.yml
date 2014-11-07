@@ -9,10 +9,8 @@ mysql:
 
 before_install:
   - composer self-update
-  - pear channel-discover pear.drush.org
 
 install:
-  - pear install drush/drush
   - phpenv rehash
   - composer install
 
