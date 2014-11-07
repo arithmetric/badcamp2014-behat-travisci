@@ -1,6 +1,5 @@
-bin/behat
-composer.lock
-html
-vendor
-behat_demo.sqlite
-bin/behat_demo.sqlite
+/composer.lock
+/html
+/vendor
+/behat_demo.sqlite
+/.idea

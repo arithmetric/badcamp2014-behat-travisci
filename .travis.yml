@@ -18,9 +18,9 @@ before_script:
   - echo "sendmail_path='true'" >> `php --ini | grep "Loaded Configuration" | awk '{print $4}'`
   - ./bin/install_drupal_mysql.sh
   - cd html
-  - bin/drush runserver --server=builtin 8080 --strict=0 &
+  - vendor/bin/drush runserver --server=builtin 8080 --strict=0 &
   - cd ..
   - until netstat -an 2>/dev/null | grep '8080.*LISTEN'; do sleep 0.2; done
 
 script:
-  - ./bin/behat
+  - vendor/bin/behat
