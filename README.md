@@ -38,8 +38,9 @@ the Goutte tool, which is installed.
 STEP-BY-STEP WITH SQLITE FOR LOCAL USE
 --------------------------------------
 
-Install sqlite if you have not already done so.
+You can run tests locally if you'd like to see if if the Behat tests are working.
 
+0. Install sqlite if you have not already done so.
 
 1. Optional - if you plan on making your own tests, fork the repository.
 
@@ -61,4 +62,18 @@ Install sqlite if you have not already done so.
 STEP-BY-STEP SETUP ON TRAVIS
 ----------------------------
 
-This is next!
+Set up your project on Travis, so that it will test every commit.
+
+1. If you have not already forked the repository, do so now.
+
+2. Go to https://travis-ci.org/ in a web browser
+
+3. Click on "Sign in with Github".  Give Travis All The Permissions.
+
+4. Next to the "My Repositories" tab, click on the "+" to add a repository.
+
+5. If you do not see your repository, click the "Sync now" button.
+
+6. Find the fork of badcamp2014-behat-travisci you made, and switch it "On".
+
+7. Wait.  Some tests will run!
