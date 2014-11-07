@@ -17,6 +17,7 @@ install:
   - composer install
 
 before_script:
+  - echo "sendmail_path='true'" >> `php --ini | grep "Loaded Configuration" | awk '{print $4}'`
   - ./bin/install_drupal.sh
   - cd html
   - drush runserver --server=builtin 8080 &
