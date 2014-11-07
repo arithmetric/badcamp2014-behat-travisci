@@ -76,4 +76,5 @@ Set up your project on Travis, so that it will test every commit.
 
 6. Find the fork of badcamp2014-behat-travisci you made, and switch it "On".
 
-7. Wait.  Some tests will run!
+7. Travis will automatically run all tests the next time a commit is pushed.
+
