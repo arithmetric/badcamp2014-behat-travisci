@@ -1,8 +1,8 @@
 #!/bin/bash
 
 SELF_DIRNAME="`dirname -- "$0"`"
-PARENT_PATH="`cd -P -- "$SELF_DIRNAME/.." && pwd -P`/`basename -- "$0"`"
-DRUPAL_ROOT="$PARENT_PATH/../drupal"
+PARENT_PATH="`cd -P -- "$SELF_DIRNAME/.." && pwd -P`"
+DRUPAL_ROOT="$PARENT_PATH/html"
 
 #
 # This script assumes that you have customized this

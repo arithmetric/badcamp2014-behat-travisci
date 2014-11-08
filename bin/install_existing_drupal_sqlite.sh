@@ -2,7 +2,7 @@
 
 SELF_DIRNAME="`dirname -- "$0"`"
 PARENT_PATH="`cd -P -- "$SELF_DIRNAME/.." && pwd -P`"
-DRUPAL_ROOT="`cd -P -- "$PARENT_PATH/../drupal" && pwd -P`"
+DRUPAL_ROOT="$PARENT_PATH/html"
 
 #
 #

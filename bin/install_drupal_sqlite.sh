@@ -1,7 +1,7 @@
 #!/bin/bash
 
 SELF_DIRNAME="`dirname -- "$0"`"
-PARENT_PATH="`cd -P -- "$SELF_DIRNAME/.." && pwd -P`/`basename -- "$0"`"
+PARENT_PATH="`cd -P -- "$SELF_DIRNAME/.." && pwd -P`"
 
 #
 #
