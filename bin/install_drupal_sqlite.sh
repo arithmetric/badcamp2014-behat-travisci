@@ -13,4 +13,4 @@ PARENT_PATH="`cd -P -- "$SELF_DIRNAME/.." && pwd -P`/`basename -- "$0"`"
 # use the install_drupal.sh script instead.
 #
 rm -rf html
-vendor/bin/drush -y -v core-quick-drupal --profile=standard --core=drupal-7.x behat_demo devel --browser=0 --no-server --root=$PARENT_PATH/html --account-name=admin --account-pass=admin
+$BASEDIR/vendor/bin/drush -y -v core-quick-drupal --profile=standard --core=drupal-7.x behat_demo devel --browser=0 --no-server --root=$PARENT_PATH/html --account-name=admin --account-pass=admin
