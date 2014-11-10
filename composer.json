@@ -1,8 +1,6 @@
 {
   "require": {
-    "drupal/drupal-extension": "~3.0"
-  },
-  "config": {
-    "bin-dir": "bin/"
+    "drupal/drupal-extension": "~3.0",
+    "drush/drush": "dev-master"
   }
 }
