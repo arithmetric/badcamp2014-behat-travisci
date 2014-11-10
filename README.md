@@ -142,3 +142,12 @@ content is left to the user.
 
 4. To test on Travis CI, follow the instructions under "Running Tests on Travis
 CI".
+
+
+## Resources
+
+- [http://behat-drupal-extension.readthedocs.org/](Drupal Extension to Behat and Mink documentation)
+- [http://thinkshout.com/blog/2014/10/getting-started-with-behat/](Getting Started with Behat [thinkshout.com])
+- [http://www.phase2technology.com/blog/the-case-for-automated-testing/](The Case for Automated Testing [phase2technology.com])
+- [http://www.vmdoh.com/blog/how-we-test-drupal-7-modules-travis-ci](How We Test Drupal 7 Modules on Travis CI [vmdoh.com])
+- [http://affinitybridge.com/blog/testing-drupal-distributions-using-behat-mink-drupal-extension-and-travis-ci](Testing Drupal distributions using Behat, Mink, Drupal Extension, and Travis CI [affinitybridge.com])
